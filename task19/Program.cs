@@ -6,10 +6,11 @@ if (n<10000)
     Console.WriteLine("Пятизначное!");
 }
 int m =n%10;
-int n2 = n%10000;
-int m2 = n%100;
 int n1 = n/10000;
-if (n1 == m || n2 == m2)
+int n2 = (n/1000)%10;
+int m2 = (n%100)/10;
+
+if (n1 == m && n2 == m2)
 {
     Console.WriteLine(n + "=>" + "полиндром");
 }
